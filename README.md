@@ -11,5 +11,5 @@
 
 | 题目                                       | JavaScript | Shell | Go   | Python |
 | ---------------------------------------- | ---------- | ----- | ---- | ------ |
-| 001.[Two Sum](https://leetcode.com/problems/two-sum/) | ✅          |       |      | ✅      |
+| 001.[Two Sum](https://leetcode.com/problems/two-sum/) | ✅          | 勉强完成  |      | ✅      |
 
