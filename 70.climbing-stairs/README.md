@@ -20,7 +20,7 @@ function climbStairs(n: number): number {
 }
 ```
 
-
+### 解题思路
 
 先说下我的理解，我是这么想的：
 
