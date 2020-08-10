@@ -63,3 +63,36 @@ var addBinary = function (a, b) {
 一直到其中一个数已经所有位已经读完，就需要把剩下的一个也按照上面的形式继续叠加。
 
 到最后如果还存在进位，就表示最后还需要进一位。
+
+
+
+上面代码可以在优化一下：
+
+```javascript
+/**
+ * @param {string} a
+ * @param {string} b
+ * @return {string}
+ */
+var addBinary = function (a, b) {
+  let result = []
+  let aArr = a.split('')
+  let bArr = b.split('')
+  let flag = 0
+  while (aArr.length > 0 || bArr.length > 0) {
+    let count = +(aArr.pop() || 0) + +(bArr.pop() || 0) + flag
+    if (count > 1) {
+      flag = 1
+      count %= 2
+    } else {
+      flag = 0
+    }
+    result.unshift(count)
+  }
+  if (flag) {
+    result.unshift(flag)
+  }
+  return result.join('')
+}
+```
+
