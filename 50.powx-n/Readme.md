@@ -84,4 +84,3 @@ if (n % 2 === 1) {
 return result
 // 5. reverse states
 ```
-
