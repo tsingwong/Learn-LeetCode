@@ -40,3 +40,28 @@ function subsets(nums: number[]): number[][] {
 
 
 ![image.png](https://pic.leetcode-cn.com/1600559952-LFaNJz-image.png)
+
+## 解法二：迭代法
+
+时间复杂度：$O(N^2)$
+
+```typescript
+function subsets(nums: number[]): number[][] {
+  let result: number[][] = [[]]
+  for (let i = 0; i < nums.length; i++) {
+    let len = result.length
+    for (let j = 0; j < len; j++) {
+      let temp = [...result[j]]
+      temp.push(nums[i])
+      result.push(temp)
+    }
+  }
+  return result
+}
+```
+
+
+
+### 解题思路
+
+在最后的结果数组里创建一个空数组，然后每次遍历，都给结果数组中的每一个数组添加新数并推进数组中。
