@@ -49,5 +49,24 @@ function letterCombinations(digits: string): string[] {
 
 分治法的主体是需要把当前数字对应的字符串全都统计一遍，所以每个都需要下探一层。
 
+```typescript
+// terminator
+if (level === digits.length) {
+  if (str) {
+    result.push(str)
+  }
+  return
+}
+
+// process
+map[digits.charAt(level)]
+
+// drill down
+recursion(level + 1, str + val)
+
+// reverse
+```
 
 
+
+ 
