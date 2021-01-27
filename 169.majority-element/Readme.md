@@ -50,3 +50,5 @@ var majorityElement = function (nums) {
 ### 解题思路
 
 因为大于一半, 所以排序后的中间那个数必是我们需要的那个结果。
+
+### 解法三：分治
